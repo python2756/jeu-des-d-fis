@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Défis - Salle de Jeu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu de Défis - Salle de Jeu</h1>
+        <div class="container">
+            <h1>Règles</h1>
+            <p>Voici les règles du jeu :</p>
+            <p>Ajoute chaque participant, et definissez ensemble le nombre maximum d'éléments. Ensuite, chacun pourra écrire sans que les autres regardent, un défi, une anecdote sur quelqu'un, ou une question.</p>
+
+        
+        </div>
+        <div class="participants-container">
+            <h2>Ajouter un participant</h2>
+            <form id="participantForm">
+                <input type="text" id="participantInput" placeholder="Nom du participant" required>
+                <button type="submit">Ajouter</button>
+            </form>
+            <h2>Liste des Participants</h2>
+            <ul id="participants"></ul>
+        </div>
+        
+            <div class="challenges-container">
+                <label for="maxChallenges">Nombre maximum d'éléments :</label>
+                <input type="number" id="maxChallenges" value="5" min="1">
+                <button type="submit">Ajouter</button>
+            </form>
+            <button id="resetChallenges">Recommencer</button>
+        </div>
+                <h2>Ajouter un défi, une anecdote ou une question</h2>
+            <form id="challengeForm">
+                <input type="text" id="challengeInput" placeholder="Entrez un défi, une anecdote ou une question" required>
+                <label for="challengeType">Choisissez le type :</label>
+                <select id="challengeType">
+                    <option value="Défi">Défi</option>
+                    <option value="Anecdote">Anecdote</option>
+                    <option value="Question">Question</option>
+                </select>
+               
+        
+        <div class="draw-container">
+            <h2>Tirer au sort</h2>
+            <button id="drawChallenge">Tirer au sort</button>
+            <div id="randomChallenge"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
